@@ -6,7 +6,7 @@ command: |
   # Run unit tests using the test dataset
   python Unit_test.py --testingdata ${{ inputs.test_dataset }}
   # If unit tests pass, run the main model script
-  python model2_label revere.py --trainingdata ${{ inputs.training_data }} --testingdata ${{ inputs.test_dataset }}
+  python model2_label_revere.py --trainingdata ${{ inputs.training_data }} --testingdata ${{ inputs.test_dataset }}
 inputs:
   training_data:
     type: uri_file

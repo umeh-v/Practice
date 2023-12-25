@@ -1,0 +1,20 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
+code: .
+command: |
+  pip install seaborn
+  pip install mlflow azureml-mlflow
+  # Run unit tests using the test dataset
+  python Unit_test.py --testingdata ${{ inputs.test_dataset }}
+  # If unit tests pass, run the main model script
+  python model2_label revere.py --trainingdata ${{ inputs.training_data }} --testingdata ${{ inputs.test_dataset }}
+inputs:
+  training_data:
+    type: uri_file
+    path: azureml:train_dataset:1
+  test_dataset:
+    type: uri_file
+    path: azureml:test_dataset:1
+environment: azureml://registries/azureml/environments/sklearn-1.1/versions/20
+compute: test-compute
+experiment_name: test1
+description: COM774_CW2

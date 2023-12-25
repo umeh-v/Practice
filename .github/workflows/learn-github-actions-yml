@@ -1,4 +1,4 @@
-name: GitHub Actions Test
+name: GitHub Actions Test from me
 run-name: ${{ github.actor }} workflow test
 on: [push]
 jobs:

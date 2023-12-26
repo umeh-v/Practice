@@ -4,7 +4,7 @@ command: |
   pip install seaborn
   pip install mlflow azureml-mlflow
   # Run unit tests using the test dataset
-  python unit_test.py --testingdata ${{ inputs.test_dataset }}
+  python unit_test.py
   # If unit tests pass, run the main model script
   python model2_label_reverse.py --trainingdata ${{ inputs.training_data }} --testingdata ${{ inputs.test_dataset }}
 inputs:

@@ -7,7 +7,7 @@ command: |
 inputs:
   training_data:
     type: uri_file
-    path: azureml:train_dataste:2
+    path: azureml:train_dataste:1
   test_dataset:
     type: uri_file
     path: azureml:test_dataset:1

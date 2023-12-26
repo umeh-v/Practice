@@ -12,7 +12,7 @@ class TestTrain(unittest.TestCase):
 
     def setUp(self):
         # Load the dataset
-        self.data = loadData(r"C:\Users\user\Documents\AI_MSc\COM774\CW2\test_dataset.csv")
+        self.data = loadData(r"C:\Users\user\Documents\PRACTICE\train_dataset.csv")
         #parser = argparse.ArgumentParser()
         #self.data = loadData('--testingdata', type=str, required=True, help='Dataset for testing')
         #args = parser.parse_args()

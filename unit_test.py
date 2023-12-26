@@ -13,8 +13,12 @@ class TestTrain(unittest.TestCase):
     def setUp(self):
         # Load the dataset
         #self.data = loadData(r"C:\Users\user\Documents\AI_MSc\COM774\CW2\test_dataset.csv")
+        #parser = argparse.ArgumentParser()
+        #self.data = loadData('--testingdata', type=str, required=True, help='Dataset for testing')
+        #args = parser.parse_args()
+
         parser = argparse.ArgumentParser()
-        self.data = loadData('--testingdata', type=str, required=True, help='Dataset for testing')
+        parser.add_argument('--testingdata', type=str, required=True, help='Dataset for testing')
         args = parser.parse_args()
         
         # Splitting the dataset into features and target
